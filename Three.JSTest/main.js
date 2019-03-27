@@ -8,18 +8,16 @@ document.body.appendChild( renderer.domElement );
 var material;
 var geometry = new THREE.BoxGeometry( 1, 1, 1 );
 var loader = new THREE.TextureLoader();
+var cubeMaterial = [
+    new THREE.MeshBasicMaterial( { color: 0xffffff, envMap: new loader.load("texture.jpeg"), SIDE :Three.DoubleSide } ),
+    new THREE.MeshBasicMaterial( { color: 0xffffff, envMap: new loader.load("texture.jpeg"), SIDE :Three.DoubleSide } ),
+    new THREE.MeshBasicMaterial( { color: 0xffffff, envMap: new loader.load("texture.jpeg"), SIDE :Three.DoubleSide } ),
+    new THREE.MeshBasicMaterial( { color: 0xffffff, envMap: new loader.load("texture.jpeg"), SIDE :Three.DoubleSide } ),
+    new THREE.MeshBasicMaterial( { color: 0xffffff, envMap: new loader.load("texture.jpeg"), SIDE :Three.DoubleSide } ),
+    new THREE.MeshBasicMaterial( { color: 0xffffff, envMap: new loader.load("texture.jpeg"), SIDE :Three.DoubleSide } )
+];
 
-// load a resource
-var loader = new THREE.CubeTextureLoader();
-//loader.setPath( 'textures/cube/pisa/' );
-
-var textureCube = loader.load( [
-	'texture.jpeg', 'texture.jpeg',
-	'texture.jpeg', 'texture.jpeg',
-	'texture.jpeg', 'texture.jpeg'
-] );
-
-var material = new THREE.MeshBasicMaterial( { color: 0xffffff, envMap: textureCube } );
+var material = new THREE.MeshFaceMaterial( cubeMaterial );
 var cube = new THREE.Mesh( geometry, material );
 scene.add( cube );
 
