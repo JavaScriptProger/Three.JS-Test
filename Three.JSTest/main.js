@@ -23,9 +23,9 @@ scene.add( cube );
 
 var cameraZ = 5;
 
-document.addEventListener("mousewheel", function(e){
+/*document.addEventListener("mousewheel", function(e){
     cameraZ += e.deltaY / 50;
-}, false);
+}, false);*/
 
 function main() {
     requestAnimationFrame( main );
