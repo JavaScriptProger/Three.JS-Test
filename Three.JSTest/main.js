@@ -12,7 +12,7 @@ var loader = new THREE.TextureLoader();
 // load a resource
 loader.load(
     // resource URL
-    'texture.jpg',
+    'https://javascriptproger.github.io/Three.JS-Test/Three.JSTest/texture.jpeg',
 
     function ( texture ) {
         material = new THREE.MeshBasicMaterial( {
