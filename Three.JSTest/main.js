@@ -10,7 +10,7 @@ var geometry = new THREE.BoxGeometry( 1, 1, 1 );
 var loader = new THREE.TextureLoader();
 
 // load a resource
-lvar loader = new THREE.CubeTextureLoader();
+var loader = new THREE.CubeTextureLoader();
 //loader.setPath( 'textures/cube/pisa/' );
 
 var textureCube = loader.load( [
