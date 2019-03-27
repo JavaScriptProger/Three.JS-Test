@@ -10,22 +10,16 @@ var geometry = new THREE.BoxGeometry( 1, 1, 1 );
 var loader = new THREE.TextureLoader();
 
 // load a resource
-loader.load(
-    // resource URL
-    'https://javascriptproger.github.io/Three.JS-Test/Three.JSTest/texture.jpeg',
+lvar loader = new THREE.CubeTextureLoader();
+//loader.setPath( 'textures/cube/pisa/' );
 
-    function ( texture ) {
-        material = new THREE.MeshBasicMaterial( {
-            map: texture
-        } );
-    },
+var textureCube = loader.load( [
+	'texture.jpeg', 'texture.jpeg',
+	'texture.jpeg', 'texture.jpeg',
+	'texture.jpeg', 'texture.jpeg'
+] );
 
-    undefined,
-
-    function ( err ) {
-        console.error( 'An error happened.' );
-    }
-);
+var material = new THREE.MeshBasicMaterial( { color: 0xffffff, envMap: textureCube } );
 var cube = new THREE.Mesh( geometry, material );
 scene.add( cube );
 
