@@ -9,12 +9,12 @@ var material;
 var geometry = new THREE.BoxGeometry( 1, 1, 1 );
 var loader = new THREE.TextureLoader();
 var cubeMaterial = [
-    new THREE.MeshBasicMaterial( { color: 0xffffff, envMap: new loader.load("texture.jpeg"), SIDE :Three.DoubleSide } ),
-    new THREE.MeshBasicMaterial( { color: 0xffffff, envMap: new loader.load("texture.jpeg"), SIDE :Three.DoubleSide } ),
-    new THREE.MeshBasicMaterial( { color: 0xffffff, envMap: new loader.load("texture.jpeg"), SIDE :Three.DoubleSide } ),
-    new THREE.MeshBasicMaterial( { color: 0xffffff, envMap: new loader.load("texture.jpeg"), SIDE :Three.DoubleSide } ),
-    new THREE.MeshBasicMaterial( { color: 0xffffff, envMap: new loader.load("texture.jpeg"), SIDE :Three.DoubleSide } ),
-    new THREE.MeshBasicMaterial( { color: 0xffffff, envMap: new loader.load("texture.jpeg"), SIDE :Three.DoubleSide } )
+    new THREE.MeshBasicMaterial( { color: 0xffffff, map: new loader.load("texture.jpeg"), SIDE :Three.DoubleSide } ),
+    new THREE.MeshBasicMaterial( { color: 0xffffff, map: new loader.load("texture.jpeg"), SIDE :Three.DoubleSide } ),
+    new THREE.MeshBasicMaterial( { color: 0xffffff, map: new loader.load("texture.jpeg"), SIDE :Three.DoubleSide } ),
+    new THREE.MeshBasicMaterial( { color: 0xffffff, map: new loader.load("texture.jpeg"), SIDE :Three.DoubleSide } ),
+    new THREE.MeshBasicMaterial( { color: 0xffffff, map: new loader.load("texture.jpeg"), SIDE :Three.DoubleSide } ),
+    new THREE.MeshBasicMaterial( { color: 0xffffff, map: new loader.load("texture.jpeg"), SIDE :Three.DoubleSide } )
 ];
 
 var material = new THREE.MeshFaceMaterial( cubeMaterial );
